@@ -1,29 +1,27 @@
 <template>
   <div id="app">
+    <DcHeader />
 
-    <header></header>
-
+<!-- 
     <main></main>
 
-    <footer></footer>
+    <footer></footer> -->
 
     <!-- <HelloWorld msg="Welcome to Your Vue.js App"/> -->
   </div>
 </template>
 
 <script>
-// import HelloWorld from './components/HelloWorld.vue'
+import DcHeader from './components/DcHeader.vue'
 
 export default {
   name: 'App',
   components: {
-    // HelloWorld
+    DcHeader
   }
 }
 </script>
 
 <style>
-#app {
-
-}
+@import './style/common.scss';
 </style>
