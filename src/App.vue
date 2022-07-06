@@ -1,29 +1,34 @@
 <template>
   <div id="app">
-    <DcHeader />
+
+    <header>
+      <DcHeader />
+    </header>
+
     <main>
       <DcMain />
     </main>
 
-<!-- 
-    <main></main>
+    <footer>
+      <DcFooter />
+    </footer>
 
-    <footer></footer> -->
-
-    <!-- <HelloWorld msg="Welcome to Your Vue.js App"/> -->
   </div>
 </template>
 
 <script>
 import DcHeader from './components/DcHeader.vue'
 import DcMain from './components/DcMain.vue'
+import DcFooter from './components/DcFooter.vue'
+
 
 
 export default {
   name: 'App',
   components: {
     DcHeader,
-    DcMain
+    DcMain,
+    DcFooter
   }
 }
 </script>
