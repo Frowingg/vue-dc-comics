@@ -1,6 +1,9 @@
 <template>
   <div id="app">
     <DcHeader />
+    <main>
+      <DcMain />
+    </main>
 
 <!-- 
     <main></main>
@@ -13,15 +16,18 @@
 
 <script>
 import DcHeader from './components/DcHeader.vue'
+import DcMain from './components/DcMain.vue'
+
 
 export default {
   name: 'App',
   components: {
-    DcHeader
+    DcHeader,
+    DcMain
   }
 }
 </script>
 
-<style>
+<style lang="scss">
 @import './style/common.scss';
 </style>
