@@ -250,7 +250,6 @@ footer{
     }
     .col{
        margin-right: 40px;
-       margin-bottom: 40px;
     }
     #footer-top-right{
         

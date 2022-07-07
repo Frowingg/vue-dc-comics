@@ -162,7 +162,8 @@ export default {
 }
 #jumbotron{
     width: 100%;
-    height: 250px;
+    max-height: 300px;
+    overflow: hidden;
 
     img{
         width: 100%;
@@ -177,7 +178,7 @@ export default {
         padding: 5px 10px;
         height: 30px;
         position: absolute;
-        top: 40%;
+        top: 46%;
         left: 17%;
         background-color: $brand-main-color;
         justify-self: flex-start;
@@ -187,6 +188,7 @@ export default {
         padding: 10px 40px;
         border: none;
         color: white;
+        cursor: pointer;
     }
 }
 #main-bottom{

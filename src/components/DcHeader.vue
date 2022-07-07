@@ -12,8 +12,8 @@
 
                 <div id="header-nav">
                     <ul>
-                        <li v-for="(link, index) in menuLinks" :key="index" :class="{ 'current': link.current}">
-                            <a :href="link.url"> {{ link.text }} </a>
+                        <li v-for="(link, index) in menuLinks" :key="index" :class="{'selected_div': link.current}">
+                            <a  :href="link.url" :class="{'selected_a': link.current}"> {{ link.text }} </a>
                         </li>
                     </ul>
                 </div>
@@ -90,6 +90,9 @@
 
 <style lang="scss" scoped>
 @import '../style/variable.scss';
+header{
+    background-color: white;
+}
 .container{
     display: flex;
     justify-content: space-between;
@@ -118,10 +121,19 @@ li{
     font-size: 9px;
     font-weight: 300;
 }
+a{
+    color: black;
+}
+.selected_a{
+    color: $brand-main-color;
+}
+.selected_div{
+    border-bottom: 4px solid $brand-main-color;
+}
 li:hover{
-    border-bottom: 4px solid #0282f9;
+    border-bottom: 4px solid $brand-main-color;
 }
 li:hover a{
-    color: #0282f9;
+    color: $brand-main-color;
 }
 </style>

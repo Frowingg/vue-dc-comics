@@ -21,22 +21,17 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-section{
-    // display: flex;
-    // flex-wrap: wrap;
-}
 .card{
     width: calc(100% / 6 - 20px);
     max-height: 200px;
     margin-right: 20px;
     color: white;
     padding-bottom: 8px;
-
     .card-img{
         width: 100%;
-        height: 70%;
+        max-height: 70%;
+        overflow: hidden;
     }
-
     img{
         width: 100%;
         height: 100%;
