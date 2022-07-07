@@ -2,9 +2,22 @@
     
     <div>
 
+        <section id="jumbotron">
+            <img src="../assets/img/jumbotron.jpg" alt="">
+        </section>
+
         <section id="main-top">
             <div class="container">
+
+                <div class="tag">
+                    CURRENT SERIES
+                </div>
+
                <DcComicCard v-for="(infoDet, index) in cardInfo" :key="index" :infoDet = 'cardInfo[index]' />
+
+                <button id="main-top-btn">
+                    LOAD MORE
+                </button>
 
             </div>
         </section>
@@ -141,13 +154,40 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import '../style/variable.scss';
 .container{
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
+}
+#jumbotron{
+    width: 100%;
+    height: 250px;
+
+    img{
+        width: 100%;
+        height: 100%;
+    }
 }
 #main-top{
-    background-color: black;
+    background-color: #1c1c1c;
     padding: 40px 0 20px;
+    .tag{
+        color: white;
+        padding: 5px 10px;
+        height: 30px;
+        position: absolute;
+        top: 40%;
+        left: 17%;
+        background-color: $brand-main-color;
+        justify-self: flex-start;
+    }
+    #main-top-btn{
+        background-color: $brand-main-color;
+        padding: 10px 40px;
+        border: none;
+        color: white;
+    }
 }
 #main-bottom{
     background-color: #0282f9;

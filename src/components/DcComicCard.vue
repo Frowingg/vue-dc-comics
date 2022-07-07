@@ -42,7 +42,8 @@ section{
         height: 100%;
     }
     p{
-        margin-top: 6px
+        margin-top: 6px;
+        font-size: 13px
     }
 }
 
