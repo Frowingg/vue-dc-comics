@@ -12,8 +12,8 @@
 
                 <div id="header-nav">
                     <ul>
-                        <li v-for="(link, index) in menuLinks" :key="index" :class="{'selected_div': link.current}">
-                            <a  :href="link.url" :class="{'selected_a': link.current}"> {{ link.text }} </a>
+                        <li v-for="(link, index) in menuLinks" :key="index" :class="{'selected': link.current}">
+                            <a :href="link.url"> {{ link.text }} </a>
                         </li>
                     </ul>
                 </div>
@@ -123,12 +123,15 @@ li{
 }
 a{
     color: black;
+    font-size: 13px;
 }
-.selected_a{
-    color: $brand-main-color;
-}
-.selected_div{
+.selected{
     border-bottom: 4px solid $brand-main-color;
+
+    a{
+    color: $brand-main-color;
+
+    }
 }
 li:hover{
     border-bottom: 4px solid $brand-main-color;

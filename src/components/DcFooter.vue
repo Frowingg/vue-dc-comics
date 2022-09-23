@@ -8,7 +8,7 @@
 
                         <ul>
                             <h3>DC COMICS</h3>
-                            <li v-for="(link, index) in menuLinks1" :key="index">
+                            <li v-for="(link, index) in menuLinks1" :key="index" :link = 'menuLinks1[index]'>
                                 <a :href="link.url"> {{ link.text }} </a>
                             </li>
                         </ul>
@@ -79,143 +79,143 @@
 </template>
 
 <script>
-    export default {
-        name: 'DcFooter',
-        data() {
-            return{
+export default {
+    name: 'DcFooter',
+    data() {
+        return {
                 menuLinks1: [
-                    {
-                        text: 'Character',
-                        link: '#',
-                    },
-                    {
-                        text: 'Comics',
-                        link: '#',
-                    },
-                    {
-                        text: 'Movies',
-                        link: '#',
-                    },
-                    {
-                        text: 'Tv',
-                        link: '#',
-                    },
-                    {
-                        text: 'Games',
-                        link: '#',
-                    },
-                    {
-                        text: 'Videos',
-                        link: '#',
-                    },
-                    {
-                        text: 'News',
-                        link: '#'
-                    }
+                {
+                    text: 'Character',
+                    link: '#',
+                },
+                {
+                    text: 'Comics',
+                    link: '#',
+                },
+                {
+                    text: 'Movies',
+                    link: '#',
+                },
+                {
+                    text: 'Tv',
+                    link: '#',
+                },
+                {
+                    text: 'Games',
+                    link: '#',
+                },
+                {
+                    text: 'Videos',
+                    link: '#',
+                },
+                {
+                    text: 'News',
+                    link: '#'
+                }
                 ],
-                menuLinks2: [
-                    {
-                        text: 'Shop DC',
-                        link: '#',
-                    },
-                    {
-                        text: 'Shop DC Collectibles',
-                        link: '#',
-                    }
-                ],
-                menuLinks3: [
-                    {
-                        text: 'Terms of Use',
-                        link: '#',
-                    },
-                    {
-                        text: 'Privacy Policy (New)',
-                        link: '#',
-                    },
-                    {
-                        text: 'Add Choice',
-                        link: '#',
-                    },
-                    {
-                        text: 'Advertising',
-                        link: '#',
-                    },
-                    {
-                        text: 'Jobs',
-                        link: '#',
-                    },
-                    {
-                        text: 'Subscriptions',
-                        link: '#',
-                    },
-                    {
-                        text: 'Talent Workshop',
-                        link: '#',
-                    },
-                    {
-                        text: 'CPSC Certificates',
-                        link: '#',
-                    },
-                    {
-                        text: 'Ratings',
-                        link: '#',
-                    },
-                    {
-                        text: 'Shop Help',
-                        link: '#',
-                    },
-                    {
-                        text: 'Contact Us',
-                        link: '#',
-                    }
-                ],
-                menuLinks4: [
-                    {
-                        text: 'DC',
-                        link: '#',
-                    },
-                    {
-                        text: 'MAD Magazine',
-                        link: '#',
-                    },
-                    {
-                        text: 'DC Kids',
-                        link: '#',
-                    },
-                    {
-                        text: 'DC Universe',
-                        link: '#',
-                    },
-                    {
-                        text: 'DC Power Visa',
-                        link: '#',
-                    }
-                ],    
-                iconMenuLinks: [
-                    {
-                        img: require('../assets/img/footer-facebook.png'),
-                        link: '#'                    
-                    },
-                    {
-                        img: require('../assets/img/footer-twitter.png'),
-                        link: '#'                    
-                    },
-                    {
-                        img: require('../assets/img/footer-youtube.png'),
-                        link: '#'                    
-                    },
-                    {
-                        img: require('../assets/img/footer-periscope.png'),
-                        link: '#'                    
-                    },
-                    {
-                        img: require('../assets/img/footer-pinterest.png'),
-                        link: '#'                    
-                    },
-                ]            
-            }
+            menuLinks2: [
+                {
+                    text: 'Shop DC',
+                    link: '#',
+                },
+                {
+                    text: 'Shop DC Collectibles',
+                    link: '#',
+                }
+            ],
+            menuLinks3: [
+                {
+                    text: 'Terms of Use',
+                    link: '#',
+                },
+                {
+                    text: 'Privacy Policy (New)',
+                    link: '#',
+                },
+                {
+                    text: 'Add Choice',
+                    link: '#',
+                },
+                {
+                    text: 'Advertising',
+                    link: '#',
+                },
+                {
+                    text: 'Jobs',
+                    link: '#',
+                },
+                {
+                    text: 'Subscriptions',
+                    link: '#',
+                },
+                {
+                    text: 'Talent Workshop',
+                    link: '#',
+                },
+                {
+                    text: 'CPSC Certificates',
+                    link: '#',
+                },
+                {
+                    text: 'Ratings',
+                    link: '#',
+                },
+                {
+                    text: 'Shop Help',
+                    link: '#',
+                },
+                {
+                    text: 'Contact Us',
+                    link: '#',
+                }
+            ],
+            menuLinks4: [
+                {
+                    text: 'DC',
+                    link: '#',
+                },
+                {
+                    text: 'MAD Magazine',
+                    link: '#',
+                },
+                {
+                    text: 'DC Kids',
+                    link: '#',
+                },
+                {
+                    text: 'DC Universe',
+                    link: '#',
+                },
+                {
+                    text: 'DC Power Visa',
+                    link: '#',
+                }
+            ],    
+            iconMenuLinks: [
+                {
+                    img: require('../assets/img/footer-facebook.png'),
+                    link: '#'                    
+                },
+                {
+                    img: require('../assets/img/footer-twitter.png'),
+                    link: '#'                    
+                },
+                {
+                    img: require('../assets/img/footer-youtube.png'),
+                    link: '#'                    
+                },
+                {
+                    img: require('../assets/img/footer-periscope.png'),
+                    link: '#'                    
+                },
+                {
+                    img: require('../assets/img/footer-pinterest.png'),
+                    link: '#'                    
+                },
+            ], 
         }
     }
+}
 </script>
 
 <style lang="scss" scoped>
